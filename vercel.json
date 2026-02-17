@@ -1,6 +1,10 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "routes": [
     { "src": "^/$", "dest": "/campanha/index.html" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "^/campanha/?$", "dest": "/campanha/index.html" },
+    { "handle": "filesystem" },
+    { "src": ".*", "dest": "/campanha/index.html" }
   ]
 }
